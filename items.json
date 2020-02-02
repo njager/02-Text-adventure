@@ -1,0 +1,16 @@
+{
+    "ROCK": {
+        "exits": {},
+        "actions": {
+            "READ": ""
+        },
+        "points": 1
+    },
+    "ITEM2": {
+        "exits": {
+            "desc": ""
+        },
+        "actions": {},
+        "points": 10
+    }
+}

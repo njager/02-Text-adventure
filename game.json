@@ -1,22 +1,26 @@
 {
 	"START": {
-		"name": "",
-		"desc": "",
-		"exits": [
-			{
-				"exit": "EXIT1",
-				"target": "LOCATION2"
-			}
-		]
+		"name": "Start",
+		"desc": "It's the start!",
+		"exits": [{
+			"exit": "EXIT1",
+			"target": "LOCATION2"
+		}, {
+			"exit": "EXIT2",
+			"target": "LOCATION3"
+		}],
+		"items": [{
+			"items":"ROCK"
+			,"desc":"A small grey rock"
+			,"take":"You take the rock and put it in your pocket"
+		}]
 	}
 	,"LOCATION2": {
 		"name": "",
 		"desc": "",
-		"exits": [
-			{
-				"exit": "EXIT1",
-				"target": "START"
-			}
-		]
+		"exits": [{
+			"exit": "EXIT1",
+			"target": "START"
+		}]
 	}
 }
