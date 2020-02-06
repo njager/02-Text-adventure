@@ -140,6 +140,11 @@ def main():
     print("Thanks for playing!")
     print("You scored {} points in {} moves".format(points,moves))
 
+    play_again = input("\n\nWould you like to play again (Y/Yes or N/No)? ")
+    play_again = play_again.lower()
+    if play_again == "yes" or play_again== "y":
+        main()
+
 # run the main function
 if __name__ == '__main__':
 	main()
