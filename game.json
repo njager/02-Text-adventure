@@ -47,7 +47,7 @@
 	}
 	,"NEIGHBOR1": {
 		"name": "Neighbor's Room",
-		"desc": "Your neighbor's room is much better kept than yours. Both beds are made, and the smell of linen and sky fills your nose.\nThe taller boy, Jack, greets you heartily and returns to his calculus homework. Math is hard.",
+		"desc": "Your neighbor's room is much better kept than yours. Both beds are made, and the smell of linen and sky fills your nose.\nThe taller boy, Dirk, greets you heartily and returns to his calculus homework. Math is hard.",
 		"exits": [{
 			"exit": "SOUTH",
 			"target": "DHALLWAY1"
@@ -55,7 +55,7 @@
 		"items": [{
 			"item":"BILL"
 			,"desc":"A crisp ten dollar bill rests on the shelf next to the door."
-			,"take":"\nJack is too focused on his homework to notice you slip the ten in your pocket."
+			,"take":"\nDirk is too focused on his homework to notice you slip the ten in your pocket."
 		}]
 	}
 	,"BRIGHT1": {
@@ -102,8 +102,8 @@
 		"items": []
 	}
 	,"LOWERFLOOR1": {
-		"name": "Bottom Floor",
-		"desc": "You make it down to the bottom floor. There is an exit leading outside to the North.\nThere are also more stairs leading down, you rarely go to the basement.",
+		"name": "Ground Floor",
+		"desc": "You make it down to the ground floor. There is an exit leading outside to the North.\nThere are also more stairs leading down, you rarely go to the basement.",
 		"exits": [{
 			"exit": "UP",
 			"target": "STAIRS1"
