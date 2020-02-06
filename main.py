@@ -5,7 +5,7 @@ assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
 
 # The game and item description files (in the same folder as this script)
 game_file = 'game.json'
-items_file = 'items.json'
+item_file = 'items.json'
 inventory = []
 
 
@@ -15,7 +15,7 @@ def load_files():
     try:
         __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
         with open(os.path.join(__location__, game_file)) as json_file: game = json.load(json_file)
-        with open(os.path.join(__location__, items_file)) as json_file: items = json.load(json_file)
+        with open(os.path.join(__location__, item_file)) as json_file: items = json.load(json_file)
         return (game, items)
     except:
         print("There was a problem reading either the game or item file.")
@@ -45,7 +45,7 @@ def render(game,items,current,moves,points):
 
     #display any items
     for item in c["items"]:
-        if not check_inventory(item["items"]):
+        if not check_inventory(item["item"]):
             print(item["desc"])
     
     #display item information
@@ -109,8 +109,9 @@ def update(game,items,current,response):
 
 # The main function for the game
 def main():
-    current = 'START'  # The starting location
-    end_game = ['END']  # Any of the end-game locations
+    current = 'DORM1'  # The starting location
+    win_game = ['OUTSIDE1'] # Any of the winning end-game locations
+    lose_game = ['WINDOW1','BRIGHT1','UPPERROOM1','SHELTER4'] # Any of the losing end-game locations
     moves = 0
     points = 0
 
@@ -119,10 +120,13 @@ def main():
     while True:
         render(game,items,current,moves,points)
 
-        for e in end_game:
-            if current == e:
-                print("You win!")
-                break #break out of the while loop
+        if current in win_game:
+            print("You win!")
+            break #break out of the while loop
+        
+        if current in lose_game:
+            print("You lose!")
+            break #break out of the while loop
 
         response = get_input()
 
@@ -131,7 +135,7 @@ def main():
 
         current = update(game,items,current,response)
         moves += 1
-        points = calculate_points()
+        points = calculate_points(items)
 
     print("Thanks for playing!")
     print("You scored {} points in {} moves".format(points,moves))

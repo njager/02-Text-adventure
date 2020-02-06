@@ -1,16 +1,26 @@
 {
-    "ROCK": {
+    "NOTE": {
         "exits": {},
         "actions": {
-            "READ": ""
+            "READ": "\nHello! This is a text adventure game. The mechanics are simple.\nType and enter the direction you want to go, cardinal, intercardinal, or 'up' and 'down' directions are allowed.\nIf you want to take an item, you can either type 'take' or 'get' followed by the item's name.\nYou can perform some actions with some items, you'll have to figure out what those actions are.\nBest of luck!"
         },
         "points": 1
     },
-    "ITEM2": {
-        "exits": {
-            "desc": ""
-        },
+    "BILL": {
+        "exits": {},
         "actions": {},
         "points": 10
+    },
+    "BROOM": {
+        "exits": {},
+        "actions": {
+            "USE": "\nYou sweep the hallway. It looks cleaner than ever before! You're a good samaritan."
+        },
+        "points": 25
+    },
+    "HAMMER": {
+        "exits": {},
+        "actions": {},
+        "points": 50
     }
 }

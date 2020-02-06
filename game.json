@@ -1,26 +1,187 @@
 {
-	"START": {
-		"name": "Start",
-		"desc": "It's the start!",
+	"DORM1": {
+		"name": "Dorm Room",
+		"desc": "You are in your dorm room. A small window to the South lets in a grey light.\nThe room smells like old food and clothes are strewn about haphazardly.\nThere is a door to your North, presumably leading to the hall.\nYou better get to class!",
 		"exits": [{
-			"exit": "EXIT1",
-			"target": "LOCATION2"
+			"exit": "NORTH",
+			"target": "DHALLWAY1"
 		}, {
-			"exit": "EXIT2",
-			"target": "LOCATION3"
+			"exit": "SOUTH",
+			"target": "WINDOW1"
 		}],
 		"items": [{
-			"items":"ROCK"
-			,"desc":"A small grey rock"
-			,"take":"You take the rock and put it in your pocket"
+			"item":"NOTE"
+			,"desc":"A tiny note with pristine lettering written in straight lines lies on the dresser."
+			,"take":"\nYou pick up the note. Maybe you should read it?"
 		}]
 	}
-	,"LOCATION2": {
-		"name": "",
-		"desc": "",
+	,"WINDOW1": {
+		"name": "Dirty Window",
+		"desc": "You pull at the window. Fortunately, the locks on the window rusted off years ago and it opens with a good heave.\nUnfortunately, as you hop out you remember you live on the tenth floor.\nThe fall is quick, but at least you somewhat know what it's like to fly.",
 		"exits": [{
-			"exit": "EXIT1",
-			"target": "START"
+			"exit": "NONE"
+		}],
+		"items": []
+	}
+	,"DHALLWAY1": {
+		"name": "Dorm Hallway",
+		"desc": "You are in the hallway connected to your dorm room. It smells rather musty.\nThere is an exit with a flickering light to your East, and a brightly lit exit to your West,\nTo your North is your neighbor, the door is slightly ajar.",
+		"exits": [{
+			"exit": "SOUTH",
+			"target": "DORM1"
+		}, {
+			"exit": "NORTH",
+			"target": "NEIGHBOR1"
+		}, {
+			"exit": "WEST",
+			"target": "BRIGHT1"
+		}, {
+			"exit": "EAST",
+			"target": "STAIRS1"
+		}],
+		"items": [{
+			"item":"BROOM"
+			,"desc":"A solid wooden broom with stiff bristles leans against the wall."
+			,"take":"\nYou pick up the broom. The varnished wood feels good in your hands. It clearly wants to be used."
 		}]
+	}
+	,"NEIGHBOR1": {
+		"name": "Neighbor's Room",
+		"desc": "Your neighbor's room is much better kept than yours. Both beds are made, and the smell of linen and sky fills your nose.\nThe taller boy, Jack, greets you heartily and returns to his calculus homework. Math is hard.",
+		"exits": [{
+			"exit": "SOUTH",
+			"target": "DHALLWAY1"
+		}],
+		"items": [{
+			"item":"BILL"
+			,"desc":"A crisp ten dollar bill rests on the shelf next to the door."
+			,"take":"\nJack is too focused on his homework to notice you slip the ten in your pocket."
+		}]
+	}
+	,"BRIGHT1": {
+		"name": "Bright Staircase",
+		"desc": "You walk into the bright staircase. It's so bright you don't notice the maintenance worker at the top of the stairs.\nYou bump into him and he tumbles down, breaking his neck.\nFurious, his partner pushes you down as well. You also break your neck.",
+		"exits": [{
+			"exit": "NONE"
+		}],
+		"items": []
+	}
+	,"STAIRS1": {
+		"name": "Poorly Lit Stairwell",
+		"desc": "You make your way into the stairwell. It's poorly lit, but you can see well enough.\nThere are stairs leading up, and stairs going down.",
+		"exits": [{
+			"exit": "WEST",
+			"target": "DHALLWAY1"
+		}, {
+			"exit": "UP",
+			"target": "UPPERFLOOR1"
+		}, {
+			"exit": "DOWN",
+			"target": "LOWERFLOOR1"
+		}],
+		"items": []
+	}
+	,"UPPERFLOOR1": {
+		"name": "Top Floor.",
+		"desc": "You climb up to the top floor. The people here aren't as nice as the people on your floor.\nThe only open door is to the west, that of the two girls living in the room directly above yours. \nYou think those girls' favorite hobby is moving furniture.",
+		"exits": [{
+			"exit": "DOWN",
+			"target": "STAIRS1"
+		}, {
+			"exit": "WEST",
+			"target": "UPPERROOM1"
+		}],
+		"items": []
+	}
+	,"UPPERROOM1": {
+		"name": "Room Above Yours",
+		"desc": "You confidently stride into the room. One girl is watching TV.\nThe other girl apparently just got out of the shower, and is wearing only a towel.\nWhen she sees you she screams, and throws her curling iron at you.\nShe used to pitch softball. It's a direct hit and your skull is broken wide open.",
+		"exits": [{
+			"exit": "NONE"
+		}],
+		"items": []
+	}
+	,"LOWERFLOOR1": {
+		"name": "Bottom Floor",
+		"desc": "You make it down to the bottom floor. There is an exit leading outside to the North.\nThere are also more stairs leading down, you rarely go to the basement.",
+		"exits": [{
+			"exit": "UP",
+			"target": "STAIRS1"
+		}, {
+			"exit": "DOWN",
+			"target": "BASEMENT1"
+		}, {
+			"exit": "NORTH",
+			"target": "OUTSIDE1"
+		}],
+		"items": []
+	}
+	,"BASEMENT1": {
+		"name": "Basement",
+		"desc": "Somehow the basement smells nicer than any other public space in the building.\nSome kids are doing their laundry, and one guy is smoking a cigarette.\nThere is a heavy steel door at the North end.",
+		"exits": [{
+			"exit": "UP",
+			"target": "LOWERFLOOR1"
+		}, {
+			"exit": "NORTH",
+			"target": "SHELTER1"
+		}],
+		"items": []
+	}
+	,"SHELTER1": {
+		"name": "Bomb Shelter",
+		"desc": "The door was locked but you learned to pick locks in 7th grade.\nYou are in the anteroom of what appears to be an old bomb shelter!\nThere is a rusty windowless door to your West, a door with a small but opaque window to your East,\nand a clean door with light seeping out from under it to your North",
+		"exits": [{
+			"exit": "SOUTH",
+			"target": "BASEMENT1"
+		}, {
+			"exit": "WEST",
+			"target": "SHELTER2"
+		}, {
+			"exit": "EAST",
+			"target": "SHELTER3"
+		}, {
+			"exit": "NORTH",
+			"target": "SHELTER4"
+		}],
+		"items": []
+	}
+	,"SHELTER2": {
+		"name": "Workshop",
+		"desc": "The walls are lined with shelves containing all sorts of knicknacks, tools, and equipment.\nClearly, this was a workshop of some kind. Sadly, most of the tools look broken.",
+		"exits": [{
+			"exit": "EAST",
+			"target": "SHELTER1"
+		}],
+		"items": [{
+			"item":"HAMMER"
+			,"desc":"An old hammer sits on a worktable."
+			,"take":"\nYou pick up the hammer. It's old, but looks reliable. You've always wanted one."
+		}]
+	}
+	,"SHELTER3": {
+		"name": "Boiler Room",
+		"desc": "You are in what appears to be a utilities room. \nThere are large tanks, a spider web of pipes, many vents, and other steel contraptions you don't understand.\nYou don't really know what to make of it all.",
+		"exits": [{
+			"exit": "WEST",
+			"target": "SHELTER1"
+		}],
+		"items": []
+	}
+	,"SHELTER4": {
+		"name": "Altar Room",
+		"desc": "You curiously make your way into to the only well-lit room in the shelter.\nYou are surprised to find a small group of people in black robes standing around what appears to be an altar.\nFive hoods turn on you simultaneously. Before you can react, one steps forward and throws a knife at you.\nThe knife thuds squarely into your chest. Your heart probably can't recover.",
+		"exits": [{
+			"exit": "NONE"
+		}],
+		"items": []
+	}
+	,"OUTSIDE1": {
+		"name": "Outside",
+		"desc": "You finally make your way outside. It's a bright, sunny day.\nYou've made the trek to class many times, and know you'll make it on time.\nHappily you begin your walk.",
+		"exits": [{
+			"exit": "NONE"
+		}],
+		"items": []
 	}
 }
